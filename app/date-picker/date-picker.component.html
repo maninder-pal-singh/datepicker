@@ -1,0 +1,20 @@
+<div #keepPicker class="date-picker">
+  <ejs-datepicker #picker (open)="onOpen($event)" (close)="onClose($event)" [value]="data" dayHeaderFormat="Narrow"
+    (change)="onChange($event)" [allowEdit]="allowEdit" [format]="format" [placeholder]="placeholder" [min]="min"
+    [max]="max" (renderDayCell)="onLoad($event)" [openOnFocus]="openCalendarOnFocus"></ejs-datepicker>
+</div>
+
+<div style="display: none">
+  <div #datepickerFooter>
+
+    <div>
+      <button
+        mat-raised-button
+        (click)="onSet()"
+        #todayButton
+      >
+        Set
+      </button>
+    </div>
+  </div>
+</div>

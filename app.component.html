@@ -1,0 +1,21 @@
+<div class="control-section">
+  <ejs-grid #grid [allowResizing]='true' [dataSource]='data' [editSettings]="editSettings" [columns]="columns" height='800px'>
+  </ejs-grid>
+  <ng-template #childTemplate let-data>
+    <div>{{data.Name}}</div>
+  </ng-template>
+
+  <ng-template #childEditTemplate let-data>
+    <div>hello</div>
+  </ng-template>
+
+  <ng-template #dateTemplate let-data>
+    <div>{{data.OrderDate}}</div>
+  </ng-template>
+
+  <ng-template #dateEditTemplate let-data>
+    <div>
+      <app-date-picker [allowEdit]="false" [openCalendarOnFocus]="true"></app-date-picker>
+    </div>
+  </ng-template>
+</div>
